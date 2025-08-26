@@ -1,0 +1,23 @@
+{
+  "name": "bank-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "minista",
+    "build": "minista build",
+    "preview": "minista preview"
+  },
+  "prettier": {
+    "semi": false
+  },
+  "devDependencies": {
+    "minista": "^3.1.12",
+    "postcss-pxtorem": "^6.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.91.0"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1"
+  }
+}
