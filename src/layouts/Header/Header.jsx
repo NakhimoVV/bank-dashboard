@@ -1,11 +1,12 @@
 import './Header.scss'
+import Logo from "@/components/Logo";
 
 const Header = (props) => {
   const {} = props
 
   return (
     <header className="header container">
-      <a className='header__logo' href="/">HBank</a>
+      <Logo />
       <a className="header__profile" href="/">Ethan Sutcliffe</a>
     </header>
   )

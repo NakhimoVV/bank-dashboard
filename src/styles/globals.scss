@@ -12,18 +12,6 @@ body {
   background-color: var(--color-black);
 }
 
-header {
-  grid-area: header;
-  border-bottom: var(--border);
-}
-aside {
-  grid-area: aside;
-  border-right: var(--border);
-}
-main {
-  grid-area: main;
-}
-
 a,
 button,
 svg * {
