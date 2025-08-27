@@ -10,7 +10,7 @@ export default function () {
       <Head
         htmlAttributes={{ lang: "en" }}
       >
-        <meta name="description" content="Project on Vanilla JS with Minista + Vite for use jsx" />
+        <meta property="description" content="Project on Vanilla JS with Minista + Vite for use jsx" />
         <title>Bank Dashboard</title>
         <script src="/src/main.js" type="module" />
       </Head>

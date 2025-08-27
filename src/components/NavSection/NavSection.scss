@@ -1,0 +1,9 @@
+.nav-section {
+  &__title {
+    margin-bottom: 24px;
+  }
+  &__list {
+    display: grid;
+    row-gap: 20px;
+  }
+}
