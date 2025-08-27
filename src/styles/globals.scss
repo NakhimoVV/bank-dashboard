@@ -1,12 +1,43 @@
 body {
+  display: grid;
+  grid-template-columns: minmax(44px, 220px) 1fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+      'header header'
+      'aside main';
+
   font-family: var(--font-family-base), sans-serif;
   font-weight: 500;
+  color: var(--color-white);
+  background-color: var(--color-black);
 }
 
-h1 {
-  font-weight: 700;
+header {
+  grid-area: header;
+  border-bottom: var(--border);
+}
+aside {
+  grid-area: aside;
+  border-right: var(--border);
+}
+main {
+  grid-area: main;
 }
 
-h2 {
-  font-weight: 600;
+a,
+button,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
 }
