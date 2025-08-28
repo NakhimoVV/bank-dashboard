@@ -10,11 +10,16 @@ body {
   font-weight: 500;
   color: var(--color-white-10);
   background-color: var(--color-black);
+  height: 100vh;
 }
 
 h2, .h2 {
   color: var(--color-white-20);
   font-size: 12px;
+}
+h3, .h3 {
+  font-size: 16px;
+  font-weight: 700;
 }
 
 a,
@@ -25,6 +30,10 @@ svg * {
 
 a {
   color: inherit;
+
+  @include hover {
+    color: var(--color-white-20);
+  }
 
   &[class] {
     text-decoration: none;

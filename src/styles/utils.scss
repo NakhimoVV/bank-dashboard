@@ -1,4 +1,14 @@
 .container {
   width: 100%;
   padding-inline: var(--padding-size);
+
+  &:not(.container--header) {
+    padding-block: var(--padding-size);
+  }
+}
+
+.wrapper {
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: var(--padding-size);
 }

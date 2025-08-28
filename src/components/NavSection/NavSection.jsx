@@ -1,6 +1,7 @@
 import './NavSection.scss'
 import Button from "@/components/Button/index.js";
 import getIdFromTitle from "@/utils/getIdFromTitle.js";
+import generateId from "@/utils/generateId.js";
 
 const NavSection = (props) => {
   const {
@@ -19,8 +20,8 @@ const NavSection = (props) => {
         {title.toUpperCase()}
       </h2>
       <ul className="nav-section__list">
-        {list.map((item ) => (
-          <li className="nav-section__list-item">
+        {list.map((item) => (
+          <li className="nav-section__list-item" key={generateId()}>
             {
               <Button
                 label={item.label}

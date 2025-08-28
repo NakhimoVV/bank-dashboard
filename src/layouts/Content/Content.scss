@@ -1,3 +1,16 @@
 .content {
   grid-area: main;
+  height: calc(100vh - var(--height-header));
+  overflow-y: auto;
+
+  display: flex;
+
+  &__hero {
+    flex: 1 1 auto;
+    border-right: var(--border);
+  }
+
+  &__side {
+    flex: 0 1 332px;
+  }
 }

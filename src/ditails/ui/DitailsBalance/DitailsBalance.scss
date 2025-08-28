@@ -1,0 +1,23 @@
+.ditails-balance {
+  display: flex;
+  justify-content: space-between;
+  height: 150px;
+  border-radius: var(--border-radius);
+  color: var(--color-black);
+  overflow: hidden;
+
+  &__left {
+    padding: var(--padding-size);
+    background-color: var(--color-green-light);
+    flex: 1 1 50%;
+  }
+
+  &__right {
+    padding: 20px;
+    flex: 1 1 50%;
+    background-color: var(--color-green);
+    background-image: url('@/assets/images/background-decor.svg');
+    background-position: 70% 50%;
+    background-repeat: no-repeat;
+  }
+}

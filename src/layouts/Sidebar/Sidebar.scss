@@ -1,8 +1,19 @@
 .sidebar {
+  position: sticky;
+  top: 0;
+  grid-area: aside;
+
   display: flex;
   flex-direction: column;
   row-gap: 36px;
-  grid-area: aside;
   border-right: var(--border);
-  padding-top: var(--padding-size);
+  height: calc(100vh - var(--height-header));
+
+  &__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 20px;
+    margin-top: auto;
+  }
 }

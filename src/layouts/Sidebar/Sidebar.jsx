@@ -65,6 +65,20 @@ const Sidebar = (props) => {
       <NavSection list={analytics} title='analytics' />
       <NavSection list={support} title='support' />
       <NavSection list={shop} title='shop' />
+      <footer className="sidebar__footer">
+        <Button
+          label='Settings'
+          href='/'
+          iconName='Setting'
+          hasFillIcon
+        />
+        <Button
+          label='Logout'
+          href='/'
+          iconName='Logout'
+          hasFillIcon
+        />
+      </footer>
     </aside>
   )
 }
