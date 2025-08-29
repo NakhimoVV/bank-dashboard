@@ -7,12 +7,19 @@
   overflow: hidden;
 
   &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: var(--padding-size);
     background-color: var(--color-green-light);
     flex: 1 1 50%;
   }
 
   &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
     padding: 20px;
     flex: 1 1 50%;
     background-color: var(--color-green);
