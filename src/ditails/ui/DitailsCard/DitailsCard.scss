@@ -36,9 +36,17 @@
   }
 
   &--current {
-    flex-direction: row;
+//    flex-direction: row;
     height: 288px;
-    width: auto;
+    width: 200px;
+
+    .ditails-card__header {
+//      writing-mode: horizontal-tb;
+//      display: flex;
+//      flex-direction: column-reverse;
+//      justify-content: stretch;
+//      align-items: stretch;
+    }
   }
 
   &__number {
