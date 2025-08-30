@@ -6,6 +6,7 @@ const Section = (props) => {
   const {
     className,
     title,
+    isHiddenTitle = false,
     children
   } = props
 
@@ -16,7 +17,9 @@ const Section = (props) => {
       className={clsx(className, 'section')}
       aria-labelledby={titleId}
     >
-      <header className="section__header">
+      <header className={clsx("section__header", {
+        'visually-hidden': isHiddenTitle,
+      })}>
           <h3 className="section__title" id={titleId}>{title}</h3>
       </header>
       <div className="section__body">

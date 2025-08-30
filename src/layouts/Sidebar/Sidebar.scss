@@ -1,13 +1,15 @@
 .sidebar {
-  position: sticky;
-  top: 0;
   grid-area: aside;
 
   display: flex;
   flex-direction: column;
   row-gap: 36px;
   border-right: var(--border);
-  height: calc(100vh - var(--height-header));
+  overflow: auto;
+
+  @include minheight {
+    row-gap: 16px;
+  }
 
   &__footer {
     display: flex;
@@ -15,5 +17,9 @@
     align-items: start;
     row-gap: 20px;
     margin-top: auto;
+
+    @include minheight {
+      row-gap: 10px;
+    }
   }
 }

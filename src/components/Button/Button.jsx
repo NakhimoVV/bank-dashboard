@@ -1,8 +1,10 @@
 import './Button.scss'
 import Icon from "@/components/Icon";
+import clsx from "clsx";
 
 const Button = (props) => {
   const {
+    mode = '', // ''(default) | 'rounded' | 'card'
     type = 'button',
     href,
     target,
@@ -29,7 +31,9 @@ const Button = (props) => {
 
   return (
     <Component
-      className="button"
+      className={clsx("button", {
+        [`button--${mode}`]: mode,
+      })}
       title={title}
       aria-label={title}
       {...specificProps}

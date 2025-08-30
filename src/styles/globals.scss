@@ -1,7 +1,12 @@
+html, body {
+  height: 100dvh;
+  overflow: hidden;
+}
+
 body {
   display: grid;
   grid-template-columns: minmax(44px, 220px) 1fr;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: var(--height-header) 1fr;
   grid-template-areas:
       'header header'
       'aside main';
@@ -10,7 +15,8 @@ body {
   font-weight: 500;
   color: var(--color-white-10);
   background-color: var(--color-black);
-  height: 100vh;
+//  height: 100dvh;
+  transition-duration: var(--transition-duration);
 }
 
 h2, .h2 {
