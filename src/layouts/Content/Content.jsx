@@ -5,6 +5,10 @@ import DitailsCard from "@/ditails/ui/DitailsCard";
 import Button from "@/components/Button";
 import DefinitionItem from "@/components/DefinitionItem";
 import DefinitionList from "@/components/DefinitionList";
+import Progressbar from "@/components/Progressbar";
+import maskForCardNumber from "@/utils/maskForCardNumber.js";
+import formatNumUs from "@/utils/formatNumUs.js";
+import formatCardDate from "@/utils/formatCardDate.js";
 
 const dataBalance = {
   balance: 25330,
@@ -15,14 +19,14 @@ const dataCards = [
     type: "Shopping Card",
     name: "NAME",
     exp: '2026-06-08',
-    number: 123456780928,
+    number: '0000123456780928',
     styleColor: 'violet'
   },
   {
     type: "Shopping Card",
     name: 'NAME',
     exp: '2026-06-08',
-    number: 123456784486,
+    number: '0000123456784486',
     styleColor: 'orange'
   }
 ]
@@ -50,12 +54,16 @@ const currentCard = {
   type: "Shopping Card",
   name: "NAME",
   exp: '2026-06-08',
-  number: 123456787800,
+  lvl: '02',
+  number: '0000123445677800',
   styleColor: 'green'
 }
+const dataSpendings = {
+  limit: 2000,
+  current: 400
+}
 
-const Content = (props) => {
-  const {} = props
+const Content = () => {
 
   return (
     <main className="content">
@@ -86,7 +94,7 @@ const Content = (props) => {
           >
             <DefinitionList>
               {dataAnalystic.map((item, index) => (
-               <DefinitionItem {...item} key={index}/>
+               <DefinitionItem value={formatNumUs(item.dollars)} {...item} key={index}/>
              ))}
             </DefinitionList>
           </Section>
@@ -102,6 +110,38 @@ const Content = (props) => {
             color={currentCard.styleColor}
             isCurrent
           />
+          <section className="card-details__data" aria-labelledby="card-number">
+            <h4 className="card-details__title" id="card-number">Card number</h4>
+            <p className="card-details__number">
+              {maskForCardNumber(currentCard.number, true)}
+            </p>
+          </section>
+          <section className="card-details__data" aria-labelledby="card-security">
+            <h4 className="card-details__title visually-hidden" id="card-security">Card security information</h4>
+            <DefinitionList className="card-details__list">
+              <DefinitionItem
+                className="card-details__item"
+                label='Expire date'
+                value={formatCardDate(currentCard.exp)}
+              />
+              <DefinitionItem
+                className="card-details__item"
+                label='cvv'
+                value={formatCardDate(currentCard.exp)}
+              />
+              <DefinitionItem
+                className="card-details__item"
+                label='Level'
+                value={currentCard.lvl}
+              />
+            </DefinitionList>
+          </section>
+          <Section
+            className="card-details__spending"
+            title='Spending limits'
+          >
+            <Progressbar {...dataSpendings} />
+          </Section>
         </Section>
       </aside>
     </main>

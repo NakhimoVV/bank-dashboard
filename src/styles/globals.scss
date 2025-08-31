@@ -15,17 +15,22 @@ body {
   font-weight: 500;
   color: var(--color-white-10);
   background-color: var(--color-black);
-//  height: 100dvh;
   transition-duration: var(--transition-duration);
 }
 
 h2, .h2 {
   color: var(--color-white-20);
   font-size: 12px;
+  text-transform: uppercase;
 }
 h3, .h3 {
   font-size: 16px;
   font-weight: 700;
+}
+h4, .h4 {
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
 a,

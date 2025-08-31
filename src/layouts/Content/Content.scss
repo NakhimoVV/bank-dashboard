@@ -25,3 +25,70 @@
     }
   }
 }
+
+.card-details {
+  & .section__body {
+    row-gap: 24px;
+  }
+
+  &__data {
+    display: grid;
+    row-gap: 8px;
+
+    &[aria-labelledby="card-security"] {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        content: '';
+        bottom: -24px;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: var(--color-grey-10);
+      }
+    }
+
+    & .card-details__number {
+      font-size: 20px;
+      font-weight: 600;
+    }
+  }
+
+  &__spending {
+    margin-top: 24px;
+  }
+
+  &__spending.section {
+    row-gap: 24px;
+  }
+
+  &__list {
+    &.definition-list {
+      justify-self: start;
+      column-gap: 12px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-right: 12px;
+      border-right: var(--border);
+    }
+
+    & .definition-item__content {
+      display: grid;
+      row-gap: 8px;
+
+    }
+    & .definition-item__term {
+      color: inherit;
+      text-transform: uppercase;
+      font-size: 12px;
+    }
+
+    & .definition-item__details {
+      font-size: 16px;
+    }
+  }
+}

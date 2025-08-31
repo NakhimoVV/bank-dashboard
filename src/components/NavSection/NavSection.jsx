@@ -17,7 +17,7 @@ const NavSection = (props) => {
       aria-labelledby={titleId}
     >
       <h2 className="nav-section__title" id={titleId}>
-        {title.toUpperCase()}
+        {title}
       </h2>
       <ul className="nav-section__list">
         {list.map((item) => (
