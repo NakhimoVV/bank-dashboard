@@ -108,7 +108,7 @@ const Content = () => {
           <DitailsCard
             data={currentCard}
             color={currentCard.styleColor}
-            isCurrent
+            isVertical
           />
           <section className="card-details__data" aria-labelledby="card-number">
             <h4 className="card-details__title" id="card-number">Card number</h4>

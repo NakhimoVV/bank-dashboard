@@ -20,3 +20,5 @@ export default function () {
     </>
   )
 }
+
+// TODO: chek card-vertical, line content, dl, avatar, mobile version aside

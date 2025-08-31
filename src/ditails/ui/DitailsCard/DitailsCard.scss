@@ -1,51 +1,38 @@
 .ditails-card {
   display: flex;
   flex-direction: column;
-
-  width: 288px;
-  height: 200px;
   color: var(--color-black);
   border-radius: var(--border-radius);
   overflow: hidden;
 
-  &--green {
-    .ditails-card__header {
-      background-color: var(--color-green-light);
-    }
-    .ditails-card__footer {
-      background-color: var(--color-green);
-    }
-  }
+  width: 288px;
+  height: 200px;
 
-  &--violet {
-    .ditails-card__header {
-      background-color: var(--color-violet-light);
-    }
-    .ditails-card__footer {
-      background-color: var(--color-violet);
-    }
-  }
-
-  &--orange {
-    .ditails-card__header {
-      background-color: var(--color-orange-light);
-    }
-    .ditails-card__footer {
-      background-color: var(--color-orange);
-    }
-  }
-
-  &--current {
-//    flex-direction: row;
+  &--vertical {
+    flex-direction: row;
     height: 288px;
-    width: 200px;
+    max-width: 200px;
 
     .ditails-card__header {
-//      writing-mode: horizontal-tb;
-//      display: flex;
-//      flex-direction: column-reverse;
-//      justify-content: stretch;
-//      align-items: stretch;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      width: 56.5%;
+      height: auto;
+      gap: 16px;
+      align-items: stretch;
+
+      &-icon {
+        transform: rotate(90deg);
+      }
+    }
+    .ditails-card__footer {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      // TODO: need fix this
+      &-icon {
+        translate: 0 -100%;
+        transform: rotate(90deg);
+      }
     }
   }
 
@@ -75,7 +62,6 @@
       height: 27px;
     }
   }
-
   &__footer {
     display: flex;
     justify-content: space-between;
@@ -83,6 +69,31 @@
     &-icon {
       width: 55px;
       height: 17px;
+    }
+  }
+
+  &--green {
+    .ditails-card__header {
+      background-color: var(--color-green-light);
+    }
+    .ditails-card__footer {
+      background-color: var(--color-green);
+    }
+  }
+  &--violet {
+    .ditails-card__header {
+      background-color: var(--color-violet-light);
+    }
+    .ditails-card__footer {
+      background-color: var(--color-violet);
+    }
+  }
+  &--orange {
+    .ditails-card__header {
+      background-color: var(--color-orange-light);
+    }
+    .ditails-card__footer {
+      background-color: var(--color-orange);
     }
   }
 }

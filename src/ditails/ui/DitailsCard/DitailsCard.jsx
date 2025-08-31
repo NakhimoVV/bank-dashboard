@@ -8,14 +8,14 @@ const DitailsCard = (props) => {
   const {
     color, // ''(default) | 'violet'/ 'orange' / 'green'
     data,
-    isCurrent = false,
+    isVertical = false,
   } = props
   const { type, name, exp, number } = data
 
   return (
     <article className={clsx("ditails-card", {
       [`ditails-card--${color}`]: color,
-      'ditails-card--current': isCurrent,
+      'ditails-card--vertical': isVertical,
     })}>
       <header className="ditails-card__header">
         <span>{type}</span>
