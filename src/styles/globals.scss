@@ -1,15 +1,10 @@
 html, body {
-  height: 100dvh;
-  overflow: hidden;
+//  height: 100dvh;
+//  overflow: hidden;
 }
 
 body {
-  display: grid;
-  grid-template-columns: minmax(44px, 220px) 1fr;
-  grid-template-rows: var(--height-header) 1fr;
-  grid-template-areas:
-      'header header'
-      'aside main';
+
 
   font-family: var(--font-family-base), sans-serif;
   font-weight: 500;

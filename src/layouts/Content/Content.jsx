@@ -69,7 +69,7 @@ const Content = () => {
     <main className="content">
       <section className="content__hero container">
         <Section
-          className="hero wrapper"
+          className="hero border-wrapper"
           title='Inventory Details'
         >
           <DitailsBalance data={dataBalance} />
@@ -88,7 +88,7 @@ const Content = () => {
             />
           </Section>
           <Section
-            className="hero__analystic wrapper"
+            className="hero__analystic border-wrapper"
             title='Analystic Details'
             isHiddenTitle
           >
@@ -102,7 +102,7 @@ const Content = () => {
       </section>
       <aside className="content__side container">
         <Section
-          className="card-details wrapper"
+          className="card-details border-wrapper"
           title='Card details'
         >
           <DitailsCard

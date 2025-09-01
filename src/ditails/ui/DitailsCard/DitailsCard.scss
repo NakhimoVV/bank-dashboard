@@ -16,7 +16,7 @@
     .ditails-card__header {
       writing-mode: vertical-rl;
       transform: rotate(180deg);
-      width: 56.5%;
+      width: 61.5%;
       height: auto;
       gap: 16px;
       align-items: stretch;
@@ -26,11 +26,14 @@
       }
     }
     .ditails-card__footer {
+      position: relative;
       writing-mode: vertical-rl;
       transform: rotate(180deg);
-      // TODO: need fix this
+
       &-icon {
-        translate: 0 -100%;
+        position: absolute;
+        // magic
+        bottom: 40px;
         transform: rotate(90deg);
       }
     }

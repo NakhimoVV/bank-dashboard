@@ -1,6 +1,10 @@
 .sidebar {
   grid-area: aside;
 
+  position: sticky;
+  top: var(--height-header);
+  left: 0;
+  height: 91dvh;
   display: flex;
   flex-direction: column;
   row-gap: 36px;

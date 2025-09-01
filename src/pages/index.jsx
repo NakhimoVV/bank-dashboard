@@ -14,11 +14,13 @@ export default function () {
         <title>Bank Dashboard</title>
         <script src="/src/main.js" type="module" />
       </Head>
-      <Header />
-      <Sidebar />
-      <Content />
+      <div className="wrapper">
+        <Header />
+        <Sidebar />
+        <Content />
+      </div>
     </>
   )
 }
 
-// TODO: chek card-vertical, line content, dl, avatar, mobile version aside
+// TODO: dl(lighthouse), avatar, mobile version aside
