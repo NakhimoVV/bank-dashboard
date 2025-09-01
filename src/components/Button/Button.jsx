@@ -4,6 +4,7 @@ import clsx from "clsx";
 
 const Button = (props) => {
   const {
+    className,
     mode = '', // ''(default) | 'rounded' | 'card'
     type = 'button',
     href,
@@ -31,7 +32,7 @@ const Button = (props) => {
 
   return (
     <Component
-      className={clsx("button", {
+      className={clsx(className,"button", {
         [`button--${mode}`]: mode,
       })}
       title={title}

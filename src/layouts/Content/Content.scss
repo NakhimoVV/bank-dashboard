@@ -4,8 +4,11 @@
   scrollbar-width: thin;
   height: 100%;
   display: flex;
-  // TODO: Разобраться с z-index
-  z-index: -1;
+  z-index: var(--layout-back);
+
+  @include mobile {
+    flex-direction: column-reverse;
+  }
 
   &__hero {
     flex: 1 1 auto;
@@ -14,7 +17,7 @@
   }
 
   &__side {
-    flex: 0 1 40.52%;
+    flex: 0 0 332px;
   }
 }
 

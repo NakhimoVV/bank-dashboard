@@ -24,6 +24,7 @@ const NavSection = (props) => {
           <li className="nav-section__list-item" key={generateId()}>
             {
               <Button
+                className="sidebar__button"
                 label={item.label}
                 href={item.href}
                 iconName={item.iconName}

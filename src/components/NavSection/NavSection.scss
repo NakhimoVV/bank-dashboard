@@ -2,6 +2,10 @@
 
   &__title {
     margin-bottom: 24px;
+
+    @include tablet {
+      @include visually-hidden;
+    }
   }
   &__list {
     display: grid;

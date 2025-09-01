@@ -56,6 +56,7 @@ const Sidebar = (props) => {
     <aside className="sidebar container">
       <header>
         <Button
+          className="sidebar__button"
           label='Dashboard'
           href='/'
           iconName='House'
@@ -67,12 +68,14 @@ const Sidebar = (props) => {
       <NavSection list={shop} title='shop' />
       <footer className="sidebar__footer">
         <Button
+          className="sidebar__button"
           label='Settings'
           href='/'
           iconName='Setting'
           hasFillIcon
         />
         <Button
+          className="sidebar__button"
           label='Logout'
           href='/'
           iconName='Logout'

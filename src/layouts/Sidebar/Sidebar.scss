@@ -4,12 +4,17 @@
   position: sticky;
   top: var(--height-header);
   left: 0;
-  height: 91dvh;
+  height: 92dvh;
   display: flex;
   flex-direction: column;
   row-gap: 36px;
   border-right: var(--border);
-  overflow: auto;
+
+  @include tablet {
+    &.container {
+      padding-inline: 12px;
+    }
+  }
 
   @include minheight {
     row-gap: 16px;
