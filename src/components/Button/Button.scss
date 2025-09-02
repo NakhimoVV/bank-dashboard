@@ -10,6 +10,9 @@
 
   &.sidebar__button {
     @include tablet {
+      width: 44px;
+      height: 44px;
+
       .button__label {
         @include visually-hidden;
       }
@@ -29,22 +32,21 @@
   }
 
   &--card {
-    width: 288px;
+    width: var(--cardWidth);
+    min-height: var(--cardHeight);
     border: var(--border-dashed);
     background-color: transparent;
     border-radius: var(--border-radius);
     color: inherit;
     column-gap: 4px;
-    min-height: 200px;
 
     @include hover {
       border: 1px solid var(--color-white-10);
     }
-  }
 
-  &:has(.button__icon:only-child) {
-    width: 44px;
-    height: 44px;
+    @include mobile {
+      --cardWidth: 271px;
+    }
   }
 
   &:active {

@@ -23,4 +23,4 @@ export default function () {
   )
 }
 
-// TODO: dl(lighthouse), avatar, mobile adaptive content main, badge component
+// TODO: dl(lighthouse), avatar, badge component
