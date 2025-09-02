@@ -75,7 +75,8 @@ const Content = () => {
           <DitailsBalance data={dataBalance} />
           <Section
             className="hero__card-list"
-            title='Inventory Details 2'
+            title='Inventory Details'
+            badge={dataCards.length}
           >
             {dataCards.map((item, index) => (
               <DitailsCard data={item} color={item.styleColor} key={index}/>

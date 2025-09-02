@@ -1,0 +1,16 @@
+.badge {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  padding-block: 2px;
+  padding-inline: 8px;
+  color: var(--color-white-10);
+  background-color: var(--color-grey-10);
+  border-radius: 50px;
+
+  &--bright {
+    color: var(--color-black);
+    background-color: var(--color-violet-light);
+  }
+}

@@ -11,14 +11,16 @@ const analytics = [
   {
     label: 'Hotjar',
     href: '/',
-    iconName: 'Archery'
+    iconName: 'Archery',
+    badge: 'New'
   }
 ]
 const support = [
   {
     label: 'Tickets',
     href: '/',
-    iconName: 'ticket'
+    iconName: 'ticket',
+    badge: 18
   },
   {
     label: 'Agents',

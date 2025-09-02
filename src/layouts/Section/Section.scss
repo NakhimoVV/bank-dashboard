@@ -2,6 +2,12 @@
   display: grid;
   row-gap: 32px;
 
+  &__header {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+  }
+
   &__body {
     display: grid;
     row-gap: 32px;

@@ -1,12 +1,14 @@
 import './Section.scss'
 import getIdFromTitle from "@/utils/getIdFromTitle.js";
 import clsx from "clsx";
+import Badge from "@/components/Badge";
 
 const Section = (props) => {
   const {
     className,
     title,
     isHiddenTitle = false,
+    badge,
     children
   } = props
 
@@ -20,7 +22,10 @@ const Section = (props) => {
       <header className={clsx("section__header", {
         'visually-hidden': isHiddenTitle,
       })}>
-          <h3 className="section__title" id={titleId}>{title}</h3>
+        <h3 className="section__title" id={titleId}>{title}</h3>
+        {badge && (
+          <Badge>{badge}</Badge>
+        )}
       </header>
       <div className="section__body">
         {children}

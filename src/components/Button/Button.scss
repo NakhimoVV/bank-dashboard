@@ -13,6 +13,10 @@
       width: 44px;
       height: 44px;
 
+      & + .badge {
+        display: none;
+      }
+
       .button__label {
         @include visually-hidden;
       }

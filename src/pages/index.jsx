@@ -23,4 +23,4 @@ export default function () {
   )
 }
 
-// TODO: dl(lighthouse), avatar, badge component
+// TODO: dl(lighthouse), лишние prop, lint+prettier, оптимизация стилей

@@ -1,7 +1,8 @@
 import './NavSection.scss'
-import Button from "@/components/Button/index.js";
+import Button from "@/components/Button";
 import getIdFromTitle from "@/utils/getIdFromTitle.js";
 import generateId from "@/utils/generateId.js";
+import Badge from "@/components/Badge";
 
 const NavSection = (props) => {
   const {
@@ -20,9 +21,11 @@ const NavSection = (props) => {
         {title}
       </h2>
       <ul className="nav-section__list">
-        {list.map((item) => (
-          <li className="nav-section__list-item" key={generateId()}>
-            {
+        {list.map((item) => {
+          const isString = typeof item.badge === 'string'
+
+          return (
+            <li className="nav-section__list-item" key={generateId()}>
               <Button
                 className="sidebar__button"
                 label={item.label}
@@ -30,9 +33,18 @@ const NavSection = (props) => {
                 iconName={item.iconName}
                 hasFillIcon
               />
-            }
-          </li>
-        ))}
+              {
+                item.badge && (
+                  <Badge
+                    mode = {isString && 'bright'}
+                  >
+                    {item.badge}
+                  </Badge>
+                )
+              }
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )
