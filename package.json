@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "start": "minista",
-    "build": "minista build && touch dist/.nojekyll",
+    "build": "minista build",
     "preview": "minista preview",
     "lint:js": "eslint .",
     "lint:js:fix": "eslint . --fix",
