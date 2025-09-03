@@ -1,32 +1,25 @@
 :root {
-  --color-white-10: #FFFFFF;
-  --color-white-20: #D2D5DA;
+  --color-white-10: #fff;
+  --color-white-20: #d2d5da;
   --color-black: #262833;
-  --color-grey-10: #43454D;
-  --color-grey-20: #6C727F;
-
-  --color-green: #73B06F;
-  --color-green-light: #E3ECE6;
-  --color-violet: #A686C4;
-  --color-violet-light: #E4D6F3;
-  --color-orange: #E9AE79;
-  --color-orange-light: #F5DDC8;
-
+  --color-grey-10: #43454d;
+  --color-grey-20: #6c727f;
+  --color-green: #73b06f;
+  --color-green-light: #e3ece6;
+  --color-violet: #a686c4;
+  --color-violet-light: #e4d6f3;
+  --color-orange: #e9ae79;
+  --color-orange-light: #f5ddc8;
   --border: 1px solid var(--color-grey-10);
   --border-dashed: 1px dashed var(--color-grey-10);
-
   --border-radius: 16px;
-
-  --font-family-base: 'Outfit';
-
+  --font-family-base: "Outfit";
   --transition-duration: 0.2s;
-
   --padding-size: 24px;
   --height-header: 72px;
   --container-width: 1350px;
   --cardWidth: 288px;
   --cardHeight: 200px;
-
   --layout-front: 1000;
   --layout-back: 100;
 }

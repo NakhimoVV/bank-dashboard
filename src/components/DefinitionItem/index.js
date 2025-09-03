@@ -1,3 +1,3 @@
-import DefinitionItem from './DefinitionItem'
+import DefinitionItem from "./DefinitionItem"
 
 export default DefinitionItem

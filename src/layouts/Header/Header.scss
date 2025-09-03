@@ -1,15 +1,14 @@
 .header {
-  grid-area: header;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: var(--border);
-  padding-block: 20px;
   position: sticky;
   top: 0;
-  background-color: var(--color-black);
   z-index: var(--layout-front);
+  display: flex;
+  background-color: var(--color-black);
+  align-items: center;
+  border-bottom: var(--border);
+  grid-area: header;
+  justify-content: space-between;
+  padding-block: 20px;
 
   &__actions {
     display: inline-flex;

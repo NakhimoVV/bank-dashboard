@@ -8,18 +8,17 @@
 }
 
 .wrapper {
-  max-width: var(--container-width);
-  margin-inline: auto;
-  width: 100%;
-
+  position: relative;
   display: grid;
+  width: 100%;
+  max-width: var(--container-width);
+  border-inline: var(--border);
+  grid-template-areas:
+    "header header"
+    "aside main";
   grid-template-columns: 220px 1fr;
   grid-template-rows: var(--height-header) 1fr;
-  grid-template-areas:
-      'header header'
-      'aside main';
-  border-inline: var(--border);
-  position: relative;
+  margin-inline: auto;
 
   @include tablet {
     grid-template-columns: fit-content(220px) 1fr;
@@ -27,9 +26,9 @@
 }
 
 .border-wrapper {
+  padding: var(--padding-size);
   border: var(--border);
   border-radius: var(--border-radius);
-  padding: var(--padding-size);
 }
 
 .visually-hidden {

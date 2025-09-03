@@ -1,7 +1,13 @@
 .definition-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 34px;
+  justify-content: space-between;
+
+  &.card-details__list {
+    column-gap: 12px;
+    justify-content: start;
+    row-gap: 0;
+  }
 }

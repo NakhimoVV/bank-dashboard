@@ -1,16 +1,16 @@
 .definition-item {
-  display: inline-flex;
-  align-items: center;
-  column-gap: 16px;
+  display: grid;
+  row-gap: 4px;
 
   &__icon {
     display: flex;
-    justify-content: center;
-    align-items: center;
     width: 48px;
     height: 48px;
-    border-radius: 8px;
     color: var(--color-black);
+    border-radius: 8px;
+    align-items: center;
+    grid-area: icon;
+    justify-content: center;
 
     & .icon {
       width: 24px;
@@ -20,9 +20,11 @@
     &--green {
       background-color: var(--color-green);
     }
+
     &--violet {
       background-color: var(--color-violet);
     }
+
     &--orange {
       background-color: var(--color-orange);
     }
@@ -35,5 +37,22 @@
   &__details {
     font-size: 24px;
     font-weight: 600;
+  }
+
+  &:has(.definition-item__icon) {
+    align-items: center;
+    column-gap: 16px;
+    grid-template-areas:
+      "icon term"
+      "icon details";
+    grid-template-columns: auto 1fr;
+
+    .definition-item__term {
+      grid-area: term;
+    }
+
+    .definition-item__details {
+      grid-area: details;
+    }
   }
 }

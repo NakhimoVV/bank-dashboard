@@ -1,16 +1,10 @@
-import './Logo.scss'
-import logoImgSrc from '@/assets/images/hbank-logo.svg'
+import logoImgSrc from "@/assets/images/hbank-logo.svg"
 
 const Logo = () => {
-  const title = 'Home'
+  const title = "Home"
 
   return (
-    <a
-      className="logo"
-      href="/"
-      title={title}
-      aria-label={title}
-    >
+    <a className="logo" href="/" title={title} aria-label={title}>
       <img
         className="logo__image"
         src={logoImgSrc}

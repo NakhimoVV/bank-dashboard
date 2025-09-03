@@ -62,10 +62,12 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: [{
-      find: '@/',
-      replacement: path.resolve('src') + '/'
-    }],
+    alias: [
+      {
+        find: "@/",
+        replacement: path.resolve("src") + "/",
+      },
+    ],
   },
   css: {
     modules: {
@@ -80,7 +82,7 @@ export default defineConfig({
         additionalData: `
             @use '@/styles/helpers' as *;
         `,
-        silenceDeprecations: ['legacy-js-api']
+        silenceDeprecations: ["legacy-js-api"],
       },
       less: {},
       stylus: {},

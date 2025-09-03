@@ -1,3 +1,3 @@
-import DitailsCardCollection from "@/modules/DitailsCard.js";
+import DetailsCardCollection from "@/modules/DetailsCard.js"
 
-new DitailsCardCollection()
+new DetailsCardCollection()

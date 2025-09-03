@@ -1,14 +1,14 @@
-import './Content.scss'
-import Section from "@/layouts/Section";
-import DitailsBalance from "@/ditails/ui/DitailsBalance";
-import DitailsCard from "@/ditails/ui/DitailsCard";
-import Button from "@/components/Button";
-import DefinitionItem from "@/components/DefinitionItem";
-import DefinitionList from "@/components/DefinitionList";
-import Progressbar from "@/components/Progressbar";
-import maskForCardNumber from "@/utils/maskForCardNumber.js";
-import formatNumUs from "@/utils/formatNumUs.js";
-import formatCardDate from "@/utils/formatCardDate.js";
+import "./Content.scss"
+import Section from "@/layouts/Section"
+import DetailsBalance from "@/details/ui/DetailsBalance"
+import DetailsCard from "@/details/ui/DetailsCard"
+import Button from "@/components/Button"
+import DefinitionItem from "@/components/DefinitionItem"
+import DefinitionList from "@/components/DefinitionList"
+import Progressbar from "@/components/Progressbar"
+import maskForCardNumber from "@/utils/maskForCardNumber.js"
+import formatNumUs from "@/utils/formatNumUs.js"
+import formatCardDate from "@/utils/formatCardDate.js"
 
 const dataBalance = {
   balance: 25330,
@@ -18,129 +18,128 @@ const dataCards = [
   {
     type: "Shopping Card",
     name: "NAME",
-    exp: '2026-06-08',
-    number: '0000123456780928',
-    styleColor: 'violet'
+    exp: "2026-06-08",
+    number: "0000123456780928",
+    styleColor: "violet",
   },
   {
     type: "Shopping Card",
-    name: 'NAME',
-    exp: '2026-06-08',
-    number: '0000123456784486',
-    styleColor: 'orange'
-  }
+    name: "NAME",
+    exp: "2026-06-08",
+    number: "0000123456784486",
+    styleColor: "orange",
+  },
 ]
 const dataAnalystic = [
   {
-    label: 'Earnings',
+    label: "Earnings",
     dollars: 12341,
-    styleColor: 'green',
-    styleIcon: 'show chart'
+    styleColor: "green",
+    styleIcon: "show chart",
   },
   {
-    label: 'Spendings',
+    label: "Spendings",
     dollars: 4009,
-    styleColor: 'violet',
-    styleIcon: 'dollar coin'
+    styleColor: "violet",
+    styleIcon: "dollar coin",
   },
   {
-    label: 'Goals',
+    label: "Goals",
     dollars: 8098,
-    styleColor: 'orange',
-    styleIcon: 'aim'
-  }
+    styleColor: "orange",
+    styleIcon: "aim",
+  },
 ]
 const currentCard = {
   type: "Shopping Card",
   name: "NAME",
-  exp: '2026-06-08',
-  lvl: '02',
-  number: '0000123445677800',
-  styleColor: 'green'
+  exp: "2026-06-08",
+  lvl: "02",
+  number: "0000123445677800",
+  styleColor: "green",
 }
 const dataSpendings = {
   limit: 2000,
-  current: 400
+  current: 400,
 }
 
 const Content = () => {
-
   return (
     <main className="content">
       <section className="content__hero container">
-        <Section
-          className="hero border-wrapper"
-          title='Inventory Details'
-        >
-          <DitailsBalance data={dataBalance} />
+        <Section className="hero border-wrapper" title="Inventory Details">
+          <DetailsBalance data={dataBalance} />
           <Section
             className="hero__card-list"
-            title='Inventory Details'
+            title="Inventory Detai1s"
             badge={dataCards.length}
           >
             {dataCards.map((item, index) => (
-              <DitailsCard data={item} color={item.styleColor} key={index}/>
+              <DetailsCard data={item} color={item.styleColor} key={index} />
             ))}
-            <Button
-              mode = 'card'
-              label = "Add Card"
-              iconName = 'Plus'
-              hasFillIcon
-            />
+            <Button mode="card" label="Add Card" iconName="Plus" hasFillIcon />
           </Section>
           <Section
             className="hero__analystic border-wrapper"
-            title='Analystic Details'
+            title="Analystic Details"
             isHiddenTitle
           >
             <DefinitionList>
               {dataAnalystic.map((item, index) => (
-               <DefinitionItem value={formatNumUs(item.dollars)} {...item} key={index}/>
-             ))}
+                <DefinitionItem
+                  value={formatNumUs(item.dollars)}
+                  {...item}
+                  key={index}
+                />
+              ))}
             </DefinitionList>
           </Section>
         </Section>
       </section>
       <aside className="content__side container">
-        <Section
-          className="card-details border-wrapper"
-          title='Card details'
-        >
-          <DitailsCard
+        <Section className="card-details border-wrapper" title="Card details">
+          <DetailsCard
             data={currentCard}
             color={currentCard.styleColor}
             isCurrent
           />
           <section className="card-details__data" aria-labelledby="card-number">
-            <h4 className="card-details__title" id="card-number">Card number</h4>
+            <h4 className="card-details__title" id="card-number">
+              Card number
+            </h4>
             <p className="card-details__number">
               {maskForCardNumber(currentCard.number, true)}
             </p>
           </section>
-          <section className="card-details__data" aria-labelledby="card-security">
-            <h4 className="card-details__title visually-hidden" id="card-security">Card security information</h4>
+          <section
+            className="card-details__data"
+            aria-labelledby="card-security"
+          >
+            <h4
+              className="card-details__title visually-hidden"
+              id="card-security"
+            >
+              Card security information
+            </h4>
             <DefinitionList className="card-details__list">
               <DefinitionItem
                 className="card-details__item"
-                label='Expire date'
+                label="Expire date"
                 value={formatCardDate(currentCard.exp)}
               />
               <DefinitionItem
                 className="card-details__item"
-                label='cvv'
+                label="cvv"
                 value={formatCardDate(currentCard.exp)}
               />
               <DefinitionItem
                 className="card-details__item"
-                label='Level'
+                label="Level"
                 value={currentCard.lvl}
               />
             </DefinitionList>
           </section>
-          <Section
-            className="card-details__spending"
-            title='Spending limits'
-          >
+          <Section className="card-details__spending" title="Spending limits">
             <Progressbar {...dataSpendings} />
           </Section>
         </Section>

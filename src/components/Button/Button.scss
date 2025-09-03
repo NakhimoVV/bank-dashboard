@@ -1,12 +1,12 @@
 .button {
   display: inline-flex;
-  justify-content: center;
+  text-align: center;
+  border: 1px solid transparent;
   align-items: center;
   column-gap: 10px;
-  text-align: center;
-  user-select: none;
   cursor: pointer;
-  border: 1px solid transparent;
+  justify-content: center;
+  user-select: none;
 
   &.sidebar__button {
     @include tablet {
@@ -38,10 +38,10 @@
   &--card {
     width: var(--cardWidth);
     min-height: var(--cardHeight);
-    border: var(--border-dashed);
-    background-color: transparent;
-    border-radius: var(--border-radius);
     color: inherit;
+    background-color: transparent;
+    border: var(--border-dashed);
+    border-radius: var(--border-radius);
     column-gap: 4px;
 
     @include hover {

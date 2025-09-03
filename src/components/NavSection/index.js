@@ -1,3 +1,3 @@
-import NavSection from './NavSection'
+import NavSection from "./NavSection"
 
 export default NavSection
