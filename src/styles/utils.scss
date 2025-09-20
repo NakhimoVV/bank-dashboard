@@ -27,7 +27,7 @@
 
   @include tablet {
     grid-template-columns: fit-content(220px) 1fr;
-    height: 100dvh;
+    height: 100vh;
     overflow: hidden;
 }
 

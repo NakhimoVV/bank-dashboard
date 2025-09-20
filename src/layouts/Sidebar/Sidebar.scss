@@ -10,7 +10,6 @@
   row-gap: 36px;
   padding-bottom: env(safe-area-inset-bottom); /* учёт выемки/индикатора на iPhone */
 
-  min-height: 0;
   overflow: visible;
 
   @include tablet {
