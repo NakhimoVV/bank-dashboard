@@ -1,10 +1,9 @@
 import { defineConfig } from "minista"
-import process from "node:process"
 import path from "path"
 
 export default defineConfig({
   root: "",
-  base: process.env.NODE_ENV === "production" ? "/bank-dashboard/" : "/",
+  base: "/bank-dashboard/",
   public: "public",
   out: "dist",
   assets: {
