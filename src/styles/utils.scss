@@ -2,6 +2,10 @@
   width: 100%;
   padding-inline: var(--padding-size);
 
+  @include mobile {
+    padding-inline: calc(var(--padding-size) / 2);
+  }
+
   &:not(.container--header) {
     padding-block: var(--padding-size);
   }
@@ -37,6 +41,10 @@
   padding: var(--padding-size);
   border: var(--border);
   border-radius: var(--border-radius);
+
+  @include mobile {
+    padding: calc(var(--padding-size) / 2);
+  }
 }
 
 .visually-hidden {
