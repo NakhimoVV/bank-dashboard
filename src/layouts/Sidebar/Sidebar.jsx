@@ -5,12 +5,12 @@ import NavSection from "@/components/NavSection"
 const analytics = [
   {
     label: "Performance",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "show chart-1",
   },
   {
     label: "Hotjar",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "Archery",
     badge: "New",
   },
@@ -18,35 +18,35 @@ const analytics = [
 const support = [
   {
     label: "Tickets",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "ticket",
     badge: 18,
   },
   {
     label: "Agents",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "account",
   },
   {
     label: "Customers",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "users",
   },
 ]
 const shop = [
   {
     label: "Products",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "shop",
   },
   {
     label: "Orders",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "basket",
   },
   {
     label: "Reports",
-    href: "/",
+    href: "/bank-dashboard/",
     iconName: "chat info",
   },
 ]

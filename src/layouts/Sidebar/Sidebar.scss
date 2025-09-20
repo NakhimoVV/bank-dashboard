@@ -3,7 +3,7 @@
   top: var(--height-header);
   left: 0;
   display: flex;
-  height: calc(100vh - var(--height-header));
+  height: calc(100dvh - var(--height-header));
   border-right: var(--border);
   flex-direction: column;
   grid-area: aside;
@@ -39,6 +39,10 @@
     align-items: start;
     flex-direction: column;
     row-gap: 20px;
+
+    @include mobile {
+      row-gap: 0;
+    }
 
     @include minheight {
       row-gap: 10px;
