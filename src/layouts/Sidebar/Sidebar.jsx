@@ -63,9 +63,11 @@ const Sidebar = () => {
           hasFillIcon
         />
       </header>
-      <NavSection list={analytics} title="analytics" />
-      <NavSection list={support} title="support" />
-      <NavSection list={shop} title="shop" />
+      <div className="sidebar__body">
+        <NavSection list={analytics} title="analytics" />
+        <NavSection list={support} title="support" />
+        <NavSection list={shop} title="shop" />
+      </div>
       <footer className="sidebar__footer">
         <Button
           className="sidebar__button"

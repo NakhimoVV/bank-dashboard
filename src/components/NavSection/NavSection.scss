@@ -11,6 +11,10 @@
     display: grid;
     row-gap: 20px;
 
+    @include tablet {
+      row-gap: 0;
+    }
+
     &-item {
       display: inline-flex;
       align-items: center;
