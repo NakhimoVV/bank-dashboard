@@ -3,11 +3,13 @@
   top: var(--height-header);
   left: 0;
   display: flex;
-  height: 92dvh;
+  height: calc(100vh - var(--height-header));
   border-right: var(--border);
   flex-direction: column;
   grid-area: aside;
   row-gap: 36px;
+
+  overflow: visible;
 
   @include tablet {
     &.container {

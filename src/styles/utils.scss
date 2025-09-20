@@ -14,14 +14,22 @@
   max-width: var(--container-width);
   border-inline: var(--border);
   grid-template-areas:
-    "header header"
-    "aside main";
+    'header header'
+    'aside main';
   grid-template-columns: 220px 1fr;
   grid-template-rows: var(--height-header) 1fr;
   margin-inline: auto;
 
+
   @include tablet {
     grid-template-columns: fit-content(220px) 1fr;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+  @include mobile {
+    grid-template-columns: fit-content(44px) 1fr;
+    border: none;
   }
 }
 
