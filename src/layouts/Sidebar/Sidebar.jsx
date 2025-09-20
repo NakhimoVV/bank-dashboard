@@ -58,7 +58,7 @@ const Sidebar = () => {
         <Button
           className="sidebar__button"
           label="Dashboard"
-          href="/"
+          href="/bank-dashboard/"
           iconName="House"
           hasFillIcon
         />
@@ -72,14 +72,14 @@ const Sidebar = () => {
         <Button
           className="sidebar__button"
           label="Settings"
-          href="/"
+          href="/bank-dashboard/"
           iconName="Setting"
           hasFillIcon
         />
         <Button
           className="sidebar__button"
           label="Logout"
-          href="/"
+          href="/bank-dashboard/"
           iconName="Logout"
           hasFillIcon
         />

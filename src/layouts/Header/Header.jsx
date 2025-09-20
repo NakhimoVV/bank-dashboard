@@ -11,7 +11,7 @@ const Header = () => {
           className="header__profile-avatar"
           src="/src/assets/images/avatar.png"
         />
-        <a className="header__profile" href="/">
+        <a className="header__profile" href="/bank-dashboard/">
           Ethan Sutcliffe
         </a>
       </div>

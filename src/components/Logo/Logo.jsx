@@ -4,7 +4,7 @@ const Logo = () => {
   const title = "Home"
 
   return (
-    <a className="logo" href="/" title={title} aria-label={title}>
+    <a className="logo" href="/bank-dashboard/" title={title} aria-label={title}>
       <img
         className="logo__image"
         src={logoImgSrc}
